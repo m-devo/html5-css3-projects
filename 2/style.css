@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: #ddd;
+}
+
+html {
+    font-size: 16px;
+}
+
+.main-header {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 2rem;
+}
+
+.top-bar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.top-bar a:hover {
+    color: #e90e16;
+}
+
+.call-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.call-bar .phone-icon {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.call-bar a {
+    text-decoration: none;
+    color: #e90e16;
+}
+
+.call-bar a:hover {
+    color: #333;
+}
+
+.logo {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.25rem;
+}
+
+.logo img {
+    height: 3.75rem;
+}
+
+
+.main-bar {
+    position: relative;
+}
+
+.start-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid #ccc;
+    height:3.75rem;
+}
+
+.start-bar .border-left, .start-bar .more-btn {
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1.25rem 1rem;
+    height:100%
+}
+
+.start-bar .border-left, .dropdown .more-btn {
+    border-right: 1px solid #ccc;
+}
+
+.start-bar .border-left:hover, .start-bar .more-btn:hover {
+    color: #e90e16;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:6.25rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-list li a {
+    color: black;
+    padding: 0.75rem  1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-list li a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.deals {
+    background-color: goldenrod;
+    width:auto;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.start-your-order {
+    background-color: #d60707;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.deals:hover,
+.start-your-order:hover {
+    transform: scale(1.5);
+    box-shadow: 0px -8px 16px 0px rgba(0, 0, 0, 0.6);
+}
+
+.main-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-bar {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.category-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    gap: 1.5rem;
+    padding: 0.8rem 1rem;
+}
+
+.category-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+}
+
+.category-bar a:hover {
+    color: #e90e16;
+} 
+
+.category-bar a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #ac0c57;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.category-bar ul a:hover::after {
+    width:100%
+}
+
+.pizzas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 50px;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.pizza-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+
+.pizza-img {
+    margin-bottom: 10px;
+}
+
+.pizza-img img {
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
+
+.left-col strong {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.pizza-card .card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0;
+}
+
+.pizza-card .title-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.pizza-card .sizes-types {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.sizes-types .select-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sizes-types .buttons-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sizes-types select,
+.sizes-types button {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.sizes-types button {
+    background-color: #d60707;
+    color: white;
+    border-color: #d60707;
+}
+
+.customize-btn:hover, .add-to-cart-btn:hover{
+    transform: scale(1.1);     
+    box-shadow: 0px -8px 16px 0px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background: #1a1a1a; 
+    color: #fff;
+    font-size: 0.9rem; 
+    border-top: 5px solid #dbd5d5; 
+    transition: background 0.4s ease; 
+}
+
+footer p {
+    margin: 0;
+    color: #ccc;
+    font-weight: 300;
+}
+
+footer:hover {
+    background: #000;
+}
+
+/* For Small Screens*/
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .top-bar {
+        justify-content: center;
+    }
+
+    .top-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .call-bar {
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .start-bar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .start-bar .border-left, .start-bar .more-btn { 
+    border:none;
+    }
+
+    .category-bar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .start-bar button, .dropdown {
+        justify-content: center;
+    }
+
+}

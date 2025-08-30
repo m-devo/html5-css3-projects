@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 140px;
+}
+
+header {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+header .logo p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    color: #00bfff;
+}
+
+header nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #00bfff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    width: 100%;
+    padding: 60px 0;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about {
+    background: linear-gradient(135deg, #f0f0f0, #fff);
+}
+
+#about p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+}
+
+#skills {
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    flex-basis: 120px;
+    flex-grow: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+#projects {
+    background: #fefefe;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+@media (min-width: 768px) {
+    .projects {
+        flex-direction: row;
+    }
+    .project-card {
+        flex: 1;
+    }
+}
+
+.project-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact .intro-text {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+}
+
+.socials a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    background: linear-gradient(135deg, #f0f0f0, #fafafa);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.socials a:hover {
+    transform: translateY(-5px) scale(1.05);
+    color: #fff;
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    box-shadow: 0 8px 20px rgba(6, 36, 206, 0.4);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about h2 {
+    animation-delay: 0.1s;
+}
+
+#about p {
+    animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+#contact.fade-up {
+    animation-delay: 0.2s;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    background: #000;
+    color: #fff;
+}

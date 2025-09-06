@@ -1,0 +1,267 @@
+/* -------- Universal -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffa500;
+    --secondary-color: #87ceeb;
+    --red-color: #ff0000;
+    --tertiary-color: #8b0000;
+    --text-color-light: #333;
+    --background-color-light: #f8f9fa;
+    --text-color-dark: #fff;
+    --background-color-dark: #2c3e50;
+    --border-color: #ccc;
+
+    --main-font: "Amiri", serif;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+}
+
+
+/* -------- Header -------- */
+.header {
+    margin: 0 10px 0 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.header-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    text-size-adjust: 10px;
+
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.info {
+    margin: 20px 10px;
+    color: var(--text-color-dark);
+}
+
+.info h1 {
+    margin-bottom: 5px;
+
+}
+
+.info p {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* --- Main --- */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 40px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: var(--background-color-light);
+    padding: 30px;
+}
+
+.left-column h3 {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.right-column h2 {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.left-column section {
+    margin-bottom: 30px;
+}
+
+.achievements,
+.education,
+.work-experience {
+    margin-bottom: 30px;
+}
+
+.contact ul,
+.online-info ul {
+    list-style: none;
+}
+
+.contact li,
+.online-info li {
+    display: grid;
+    grid-template-columns: 0.5fr 5fr;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact i,
+.online-info i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.progress-bar {
+    background-color: var(--border-color);
+    height: 10px;
+}
+
+.progress {
+    height: 100%;
+}
+
+.progress.first {
+    width: 80%;
+    background-color: var(--red-color);
+}
+
+.progress.second {
+    width: 60%;
+    background-color: var(--secondary-color);
+}
+
+.progress.third {
+    width: 40%;
+    background-color: var(--tertiary-color);
+}
+
+.progress.first {
+    width: 80%;
+}
+
+.progress.second {
+    width: 60%;
+}
+
+.progress.third {
+    width: 40%;
+}
+
+.progress.first {
+    background-color: var(--red-color);
+}
+
+.progress.second {
+    background-color: var(--secondary-color);
+}
+
+.progress.third {
+    background-color: var(--tertiary-color);
+
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 10px;
+    color: var(--text-color-light);
+}
+
+.skill-circle::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--background-color-light);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.skill-circle span {
+    position: relative;
+    z-index: 2;
+}
+
+.skill-circle:nth-child(1) {
+    background: conic-gradient(var(--primary-color) 90%, var(--border-color) 0);
+}
+
+.skill-circle:nth-child(2) {
+    background: conic-gradient(var(--secondary-color) 75%, var(--border-color) 0);
+}
+
+.skill-circle:nth-child(3) {
+    background: conic-gradient(var(--tertiary-color) 65%, var(--border-color) 0);
+}
+
+.skill-circle:nth-child(4) {
+    background: conic-gradient(var(--red-color) 85%, var(--border-color) 0);
+}
+
+/* -------- Footer -------- */
+
+.footer-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 15px;
+    margin: 0 10px 0 10px;
+}
+
+.footer-color-1 {
+    background-color: var(--secondary-color);
+}
+
+.footer-color-2 {
+    background-color: var(--primary-color);
+}
+
+.footer-color-3 {
+    background-color: var(--tertiary-color);
+}
+
+/* -------- Responsive -------- */
+
+@media (max-width: 800px) {
+
+    .header-section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .info h1 {
+        font-size: 1.8rem;
+    }
+}

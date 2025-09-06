@@ -1,0 +1,28 @@
+Task Description:
+You will build a simple login form with a "Remember Me" feature.
+- The form should have:
+  - An email input
+  - A password input
+  - A "Remember Me" checkbox
+  - A Login button
+
+When the user checks "Remember Me" and logs in:
+- Save the email in localStorage.
+- Next time the page is loaded, the email field should be pre-filled automatically.
+
+If "Remember Me" is not checked:
+- Do not save the email.
+
+Requirements:
+1. Create an HTML form with email, password, checkbox, and button.
+2. Use JavaScript to handle the "Login" button click.
+3. If "Remember Me" is checked:
+   - Save the email in localStorage.
+   - Load the email from localStorage whenever the page is refreshed.
+4. If "Remember Me" is not checked:
+   - Remove the email from localStorage.
+
+Bonus (Optional):
+- Show a message: “Welcome back, [email]!” if the email is remembered.
+- Add a "Clear Remember Me" button to remove stored data.
+- Save both email + password (only for practice, not recommended in real apps).
